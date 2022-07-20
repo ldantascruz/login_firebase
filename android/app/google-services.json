@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "1031116435454",
+    "project_id": "flutternapratica-b72f1",
+    "storage_bucket": "flutternapratica-b72f1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1031116435454:android:c836451e1f752bef1b1aaf",
+        "android_client_info": {
+          "package_name": "com.example.login_firebase"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1031116435454-dccat3fi958s4arlh3tll7bennkua8pn.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.login_firebase",
+            "certificate_hash": "d4b5d9c62a36c5819dc4c4d623eb18ca2fa63477"
+          }
+        },
+        {
+          "client_id": "1031116435454-t3mf6qvf2ch7csgfp9uf8tmbi7a7sus7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCfPjrm9Go_vV8iOaAIKillDF9v4FR55nU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1031116435454-t3mf6qvf2ch7csgfp9uf8tmbi7a7sus7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
