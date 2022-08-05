@@ -1,8 +1,7 @@
 name: login_firebase
 description: A new Flutter project.
 
-# The following line prevents the package from being accidentally published to
-# pub.dev using `flutter pub publish`. This is preferred for private packages.
+
 publish_to: 'none' # Remove this line if you wish to publish to pub.dev
 
 # The following defines the version and build number for your application.
@@ -34,8 +33,14 @@ dependencies:
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.2
-  firebase_auth: ^3.4.1
-  firebase_core: ^1.19.1
+  firebase_auth: ^3.6.2
+  firebase_core: ^1.20.0
+  flutter_local_notifications: ^9.7.0
+  timezone: ^0.8.0
+  flutter_native_timezone: ^2.0.0
+  provider: ^6.0.3
+  firebase_messaging: ^12.0.1
+
 
 dev_dependencies:
   flutter_test:

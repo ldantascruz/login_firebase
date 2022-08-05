@@ -1,5 +1,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:login_firebase/routes/routes.dart';
 
 class LoginController {
   String? username = '';
@@ -39,6 +41,8 @@ class LoginController {
     } catch (e) {
       isLoading = false;
       error = "Não foi possível fazer login";
+      await Future.delayed(Duration(seconds: 2));
+      error = '';
     }
   }
 
@@ -70,7 +74,9 @@ class LoginController {
   }) async {
     final response = await FirebaseAuth.instance
         .signInWithEmailAndPassword(email: username, password: password);
-    print(response);
+    if (kDebugMode) {
+      print(response);
+    }
     return true;
   }
 }

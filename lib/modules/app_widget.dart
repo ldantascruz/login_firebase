@@ -1,18 +1,33 @@
 import 'package:flutter/material.dart';
-import 'package:login_firebase/modules/home/home_page.dart';
-import 'package:login_firebase/modules/login/login_page.dart';
+import 'package:login_firebase/routes/routes.dart';
+import 'package:login_firebase/shared/notification_service.dart';
+import 'package:provider/provider.dart';
 
-class AppWidget extends StatelessWidget {
+class AppWidget extends StatefulWidget {
   const AppWidget({Key? key}) : super(key: key);
+
+  @override
+  State<AppWidget> createState() => _AppWidgetState();
+}
+
+class _AppWidgetState extends State<AppWidget> {
+  @override
+  void initState() {
+    super.initState();
+    checkNotifications();
+  }
+
+  checkNotifications() async {
+    await Provider.of<NotificationService>(context, listen: false)
+        .checkForNotifications();
+  }
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      initialRoute: '/login',
-      routes: {
-        '/login': (context) => const LoginPage(),
-        '/home': (context) => const HomePage()
-      },
+      routes: Routes.list,
+      initialRoute: Routes.initial,
+      navigatorKey: Routes.navigatorKey,
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: const Color(0xffFCEC5F)),
